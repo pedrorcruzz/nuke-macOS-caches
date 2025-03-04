@@ -18,7 +18,7 @@ cd nuke-macOS-caches
 ## ▶️ Usage
 Run the script using Python:  
 ```sh
-python3 main.py
+make run
 ```
 
 ## ⚠️ Warning
