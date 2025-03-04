@@ -3,4 +3,4 @@
 PYTHON = python3
 
 run:
-	$(PYTHON) main.py
+	@$(PYTHON) main.py
