@@ -41,7 +41,7 @@ clear' > ~/path/your-scripts/clear-cache.sh
 chmod +x ~/path/your-scripts/clear-cache.sh
 ```
 
-You can create alias on zshrc for script:
+You can create alias in your zshrc for script:
 ```sh
 echo "alias ccache='pushd \"\$(pwd)\" > /dev/null && cd ~/path/your-scripts && ./clear-cache.sh && popd > /dev/null'" >> ~/.zshrc
 source ~/.zshrc
