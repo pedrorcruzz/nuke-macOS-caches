@@ -21,6 +21,34 @@ Run the script using Python:
 make run
 ```
 
+Alternatively, you can create an alias in your .zshrc for easier execution:
+
+```sh
+echo "alias ccache='pushd \"\$(pwd)\" > /dev/null && cd ~/your-path/nuke-macOS-caches && make run && clear && popd > /dev/null'" >> ~/.zshrc
+source ~/.zshrc
+ccache
+```
+You can also use a shell script to execute the command:
+
+```sh
+echo '#!/bin/bash
+cd ~/your-path/nuke-macOS-caches
+make run
+sleep 1.3
+clear' > ~/path/your-scripts/clear-cache.sh
+```
+```sh
+chmod +x ~/path/your-scripts/clear-cache.sh
+```
+
+You can create alias on zshrc for script:
+```sh
+echo "alias ccache='pushd \"\$(pwd)\" > /dev/null && cd ~/path/your-scripts && ./clear-cache.sh && popd > /dev/null'" >> ~/.zshrc
+source ~/.zshrc
+ccache
+```
+
+
 ## ⚠️ Warning
 This script **permanently deletes** all files in `~/Library/Caches`. Use it with caution.
 
