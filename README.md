@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="images/demo-crop.gif" width="900">
+</p>
+
+
+
+
 # nuke-macOS-caches
 
  A simple Python script to completely remove all contents of the macOS Caches directory. Helps free up space and resolve potential issues caused by cached files.
