@@ -1,6 +1,6 @@
-<p align="center">
+<div align="center">
   <img src="images/demo-crop.gif" width="900">
-</p>
+</div>
 
 
 
