@@ -1,6 +1,7 @@
 .PHONY: run
 
 PYTHON = python3
+GO = go
 
 run:
-	@$(PYTHON) main.py
+	@$(GO) run main.go

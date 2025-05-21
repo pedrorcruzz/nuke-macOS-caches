@@ -7,7 +7,7 @@
 
 # nuke-macOS-caches
 
- A simple Python script to completely remove all contents of the macOS Caches directory. Helps free up space and resolve potential issues caused by cached files.
+ A simple Go script to completely remove all contents of the macOS Caches directory. Helps free up space and resolve potential issues caused by cached files.
 
 ## Features
 - Deletes all files and folders inside `~/Library/Caches`
@@ -23,7 +23,7 @@ cd nuke-macOS-caches
 ```
 
 ## Usage
-Run the script using Python:  
+Run the script using Go:  
 ```sh
 make run
 ```
@@ -61,3 +61,4 @@ This script **permanently deletes** all files in `~/Library/Caches`. Use it with
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
