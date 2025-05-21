@@ -3,4 +3,4 @@
 GO = go
 
 run:
-	@$(GO) run main.go
+	@bash -c '$(GO) run main.go 2>/dev/null || true'

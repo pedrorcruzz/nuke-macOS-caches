@@ -52,7 +52,7 @@ func formatSize(size int64) string {
 	return fmt.Sprintf("%.2f %s", s, units[i])
 }
 
-func clearCache() (int64, error) {
+func clearCache(ignoreGoBuild bool) (int64, error) {
 	homeDir, err := os.UserHomeDir()
 	if err != nil {
 		return 0, err
@@ -67,7 +67,7 @@ func clearCache() (int64, error) {
 	var totalFreed int64 = 0
 
 	for _, entry := range entries {
-		if entry.Name() == "go-build" {
+		if ignoreGoBuild && entry.Name() == "go-build" {
 			continue
 		}
 		entryPath := filepath.Join(cacheDir, entry.Name())
@@ -91,12 +91,17 @@ func clearCache() (int64, error) {
 }
 
 func main() {
-	freed, err := clearCache()
+	ignoreGoBuild := false
+
+	freed, err := clearCache(ignoreGoBuild)
 	if err != nil {
 		fmt.Println("Error clearing cache:", err)
 		return
 	}
 
 	fmt.Println("All contents of ~/Library/Caches have been deleted.")
+	if ignoreGoBuild {
+		fmt.Println("Note: 'go-build' folder was preserved.")
+	}
 	fmt.Println("Freed space:", formatSize(freed))
 }
