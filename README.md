@@ -28,6 +28,12 @@ Run the script using Go:
 make run
 ```
 
+### Build
+
+```bash
+go build -o nuke-cache
+```
+
 Alternatively, you can create an alias in your .zshrc for easier execution:
 
 ```sh
@@ -40,7 +46,7 @@ You can also use a shell script to execute the command:
 ```sh
 echo '#!/bin/bash
 cd ~/your-path/nuke-macOS-caches
-make run
+./nuke-cache
 sleep 1.3
 clear' > ~/path/your-scripts/clear-cache.sh
 ```
